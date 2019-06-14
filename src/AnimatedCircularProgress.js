@@ -45,6 +45,10 @@ export default class AnimatedCircularProgress extends React.PureComponent {
 
     return anim;
   }
+  
+  pause() {
+    this.state.fillAnimation.stopAnimation();
+  }
 
   render() {
     const { fill, prefill, ...other } = this.props;
